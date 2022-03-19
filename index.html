@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>Fotos Daqui</title>
+</head>
+<body>
+
+    <header class="searchSection">
+
+        <nav class="searchSection__nav">
+
+            <label class="nav_label" for="pesquisar">Pesquisar por</label>
+
+            <div class="nav__div">
+                
+                <input class="nav__searchInput" type="search" name="pesquisar" id="pesquisar" placeholder="Digite aqui o termo">
+                
+                <button class="nav___button">Pesquisar</button>
+
+            </div>
+
+                <section class="nav__sugestions">
+
+                    <span class="sugestions__people">Pessoas</span>
+                    <span class="sugestions__decoration">Decorações</span>
+                    <span class="sugestions__homeOffice">Home Office</span>
+
+                </section>
+        </nav>
+
+    </header>
+
+    <main>
+        <figure class="upperDiv">
+
+            <img class="upperDiv__image" src="./src/img/doit.jpg" alt="Pesquise">
+            <figcaption>Pesquise</figcaption>
+
+        </figure>
+
+        <div class="bottomDiv">
+
+            <section class="imageInfo">
+
+                <h2 class="imageInfo__title"></h2>
+
+                <span class="imageInfo__person"></span>
+
+            </section>
+
+            <div class="buttons">
+
+                <button class="buttons__next"> > </button>
+                <button class="buttons__previous"> < </button>
+
+            </div>
+        </div>
+
+    </main>
+    
+    <script type="module" src="./src/js/script.js"></script>
+</body>
+</html>
