@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@keyframes scale-out-horizontal {
+    0% {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scaleX(0);
+      opacity: 1;
+    }
+}
+
+@keyframes scale-up-ver-bottom {
+    0% {
+      transform: scaleY(0.4);
+      transform-origin: 0% 100%;
+    }
+    100% {
+      transform: scaleY(1);
+      transform-origin: 0% 100%;
+    }
+}
+  
+/* ESTILIZAÇÃO */
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color:  #e9ecef;;
+}
+
+figcaption{
+    display: none;
+}
+
+.searchSection {
+    background-color: #7253B0;
+    height: 243px;
+    padding: 19px 15px 24px 13px;
+}
+
+.searchSection__nav {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    height: 203px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nav_label {
+    font-size: 12px;
+}
+
+.nav__div {
+    width: 100%;
+}
+
+.nav__searchInput {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 60px;
+    padding-left: 15px;
+    font-family: 'Inter', sans-serif;
+    border: transparent;
+}
+
+.nav___button {
+    background-color: #7253B0;
+    width: 100%;
+    height: 60px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    color: white;
+    border: transparent;
+    margin-bottom: 20px;
+}
+
+.nav__sugestions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    color: #7253B0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sugestions__people:hover, .sugestions__decoration:hover, .sugestions__homeOffice:hover {
+    cursor: pointer;
+}
+
+main {
+    margin-top: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upperDiv__image {
+    width: 353px;
+    height: 256px;
+    border-radius: 5px;
+}
+
+.bottomDiv {
+    margin-top: 17.65px;
+    margin-bottom: 25px;
+    display: none;
+}
+
+.imageInfo {
+    box-shadow: 0px 2.97925px 29.7925px -14.8962px rgba(0, 0, 0, 0.25);
+    width: 217px;
+    min-height: 31px;
+    text-align: left;
+    padding: 11px 88px 24px 11px;
+
+}
+
+.imageInfo__title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.imageInfo__title::before {
+    content: " ";
+    display: block;
+    background-color: #7253B0;
+    width: 22px;
+    height: 4px;
+    margin-bottom: 9px;
+}
+
+.imageInfo__person {
+    color: #878787;
+    font-size: 10px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    margin-left: 4px;
+}
+
+.buttons__next, .buttons__previous {
+    background-color: #7253B0;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    border: transparent;
+    border-radius: 4px;
+    width: 35px;
+    height: 28px;
+}
+
+.buttons__next {
+    margin-bottom: 10px;
+}
+
+/* MODAL */
+
+.modalContainer {
+    background-color: #878787;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.modalContainer__modal {
+    padding: 10px;
+    max-width: 341px;
+    margin: auto;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.fadein {
+    animation: scale-up-ver-bottom 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.fadeout {
+    animation: scale-out-horizontal 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.modal__title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+@media (min-width:768px){
+    .upperDiv__image {
+        width: 535px;
+        height: 369px;
+    }
+    
+    .imageInfo {
+        width: 397px; 
+    }
+
+    .imageInfo__title {
+        font-size: 16px;
+    }
+
+    .imageInfo__title::before {
+        width: 25px;
+    }
+}
+
+@media (min-width:1024px){
+    .searchSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 153px;
+        padding: 38px 0px;
+    }
+
+    .searchSection__nav {
+        width: 786px;
+        height: 113px;
+    }
+
+    .nav__div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav__searchInput {
+        margin-bottom: 10px;
+        width: 620px;
+    }
+    
+    .nav___button {
+        width: 156px;
+        margin-left: 10px;
+        margin-bottom: 0px;
+    }
+
+    .nav__sugestions {
+        justify-content: flex-start;
+    }
+
+    .sugestions__people, .sugestions__decoration {
+        margin-right: 40px;
+    }
+
+    .upperDiv__image {
+        width: 588px;
+        height: 466px;
+    }
+    
+    .imageInfo {
+        width: 450px; 
+    }
+
+    .imageInfo__title::before {
+        width: 30px;
+    }
+}
