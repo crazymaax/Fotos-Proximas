@@ -80,6 +80,7 @@ figcaption{
     margin-bottom: 20px;
 }
 
+
 .nav__sugestions {
     display: flex;
     flex-direction: row;
@@ -89,7 +90,7 @@ figcaption{
     font-family: 'Poppins', sans-serif;
 }
 
-.sugestions__people:hover, .sugestions__decoration:hover, .sugestions__homeOffice:hover {
+.nav___button:hover, .sugestions__people:hover, .sugestions__decoration:hover, .sugestions__homeOffice:hover, .buttons__next:hover, .buttons__previous:hover {
     cursor: pointer;
 }
 
